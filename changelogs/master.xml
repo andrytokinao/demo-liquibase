@@ -10,4 +10,6 @@
     <include file="changelogs/modify-columns.xml"/>
     <include file="changelogs/create-table-role.xml"/>
     <include file="changelogs/add-foreign-key.xml"/>
+    <include file="changelogs/aadd-column-phone.xml" />
+    <include file="changelogs/modify-columns-phone-to-varchar.xml" />
 </databaseChangeLog>
