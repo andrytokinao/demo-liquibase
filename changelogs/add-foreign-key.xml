@@ -7,7 +7,7 @@
 
     <changeSet id="2023-06-18-3" author="tokiniaina">
         <addForeignKeyConstraint baseTableName="user"
-                                 baseColumnNames="id"
+                                 baseColumnNames="role_id"
                                  constraintName="fk_user_role"
                                  referencedTableName="role"
                                  referencedColumnNames="id"/>

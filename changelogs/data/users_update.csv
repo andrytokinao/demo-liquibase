@@ -1,0 +1,3 @@
+id,username,email,created_at
+1,user1,user1Updated@example.com,2023-06-18 12:34:56
+2,user2,user2Updated@example.com,2023-06-19 12:34:56

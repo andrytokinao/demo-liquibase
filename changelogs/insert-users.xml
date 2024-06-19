@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+   
+    <!-- Insertion des données à partir d'un fichier CSV -->
+    <changeSet id="2023-06-19-1" author="teandriamahefasoa">
+        <loadData file="changelogs/data/users.csv" separator="," tableName="user">
+            <column name="id" type="numeric"/>
+            <column name="username" type="string"/>
+            <column name="email" type="string"/>
+            <column name="created_at" type="datetime"/>
+        </loadData>
+    </changeSet>
+
+    <!-- Insertion des données à partir d'un fichier XML -->
+   <!-- <changeSet id="2023-06-19-2" author="teandriamahefasoa">
+        <loadUpdateData file="data/users.xml" tableName="user">
+            <column name="id" type="numeric"/>
+            <column name="username" type="string"/>
+            <column name="email" type="string"/>
+            <column name="created_at" type="datetime"/>
+        </loadUpdateData>
+    
+    </changeSet>--> 
+</databaseChangeLog>
