@@ -1,0 +1,45 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="tandriamahefasoa (generated)" id="1719413716425-1">
+        <sql>
+            SET IDENTITY_INSERT [dbo].[role] ON;
+        </sql>
+        <insert tableName="role">
+            <column name="id" valueNumeric="1"/>
+            <column name="role_name" value="admin"/>
+        </insert>
+        <insert tableName="role">
+            <column name="id" valueNumeric="2"/>
+            <column name="role_name" value="user"/>
+        </insert>
+        <sql>
+            SET IDENTITY_INSERT [dbo].[role] OFF;
+        </sql>
+    </changeSet>
+    <changeSet author="tandriamahefasoa (generated)" id="1719413716425-2">
+        <sql>
+            SET IDENTITY_INSERT [dbo].[role] ON;
+        </sql>
+        <insert tableName="user">
+            <column name="id" valueNumeric="1"/>
+            <column name="username" value="user1"/>
+            <column name="email" value="user1Updated@example.com"/>
+            <column name="created_at" valueDate="2023-06-18T12:34:56"/>
+            <column name="full_name"/>
+            <column name="role_id" valueNumeric="1"/>
+            <column name="phone"/>
+        </insert>
+        <insert tableName="user">
+            <column name="id" valueNumeric="2"/>
+            <column name="username" value="user2"/>
+            <column name="email" value="user2Updated@example.com"/>
+            <column name="created_at" valueDate="2023-06-19T12:34:56"/>
+            <column name="full_name"/>
+            <column name="role_id" valueNumeric="2"/>
+            <column name="phone"/>
+        </insert>
+        <sql>
+            SET IDENTITY_INSERT [dbo].[role] OFF;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

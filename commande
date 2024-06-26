@@ -1,0 +1,3 @@
+liquibase --url=jdbc:postgresql://localhost:5432/postgres --username=postgres --password=MyPassword --changeLogFile=changelogs/migration/schema.xml generateChangeLog --logLevel=debug   
+liquibase --url=jdbc:postgresql://localhost:5432/postgres --username=postgres --password=MyPassword --changeLogFile=changelogs/migration/data.xml generateChangeLog --logLevel=debug --diffTypes=data
+liquibase --defaultsFile=liquibase-mssql.properties update --logLevel=debug
